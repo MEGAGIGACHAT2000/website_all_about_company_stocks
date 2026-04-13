@@ -139,14 +139,21 @@
                 padding-top: 24px;
             }
             @media (max-width: 768px) {
-                .main-content {padding: 20px 16px;}
+                .sidebar {
+                    width: 220px;
+                    padding: 20px 12px;
+                }
+                .main-content {
+                    margin-left: 220px;
+                    padding: 20px 16px;
+                }
                 .inner-white {padding: 20px 16px;}
                 h1 {
-                    font-size: 1.8rem;
+                    font-size: 1.6rem;
                     text-align: center;
                 }
-                h2 {font-size: 1.4rem;}
-                p, li, dd, dt {font-size: 0.95rem;}
+                h2 {font-size: 1.3rem;}
+                p, li, dd, dt {font-size: 0.9rem;}
                 .stock-img {
                     float: none;
                     display: block;
@@ -162,120 +169,111 @@
                 }
                 input, select, textarea {
                     font-size: 16px;
-                    padding: 12px;
+                    padding: 10px;
                 }
                 input[type="submit"], input[type="reset"] {
                     width: 100%;
                     margin: 8px 0;
-                    padding: 12px;
                 }
-                .stock-list {padding: 15px;}
-                .menu-toggle {
-                    padding: 10px 14px;
-                    font-size: 1.2rem;
-                    top: 16px;
-                    left: 16px;
-                }
-                .sidebar.open {width: 260px;}
                 .nav-drawer a {
+                    padding: 10px 12px;
+                    font-size: 14px;
                     min-width: auto;
                 }
+                .nav-drawer a i {
+                    font-size: 1rem;
+                    width: 20px;
+                }
+                .menu-toggle {display: none;}
+                .sidebar-logo {
+                    font-size: 1.3rem;
+                    margin-bottom: 20px;
+                }
                 dl {margin: 0;}
-                dt {font-size: 1.1rem;}
+                dt {font-size: 1rem;}
                 dd {margin-left: 16px;}
                 ol, ul {margin-left: 20px;}
             }
-            .menu-toggle {display: none;}
         </style>
     </head>
     <body>
-        <div class="menu-toggle" id="menuToggle">
-            <i class="fas fa-bars"></i>
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-logo">
+                <i class="fas fa-chart-line"></i> Invest
+            </div>
+            <div class="nav-drawer">
+                <a href="index.html">
+                    <i class="fas fa-home"></i>
+                    <span>Главная</span>
+                </a>
+                <a href="glossary.html">
+                    <i class="fas fa-book-open"></i>
+                    <span>Словарь</span>
+                </a>
+                <a href="hardware.html">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Аналитика</span>
+                </a>
+                <a href="anketa.html">
+                    <i class="fas fa-pen-to-square"></i>
+                    <span>Анкета</span>
+                </a>
+                <a href="software.html">
+                    <i class="fas fa-lightbulb"></i>
+                    <span>Стратегии</span>
+                </a>
+            </div>
         </div>
-            <div class="sidebar" id="sidebar">
-                <div class="sidebar-logo">
-                    <i class="fas fa-chart-line"></i> Invest
-                </div>
-                <div class="nav-drawer">
-                    <a href="index.html">
-                        <i class="fas fa-home"></i>
-                        <span>Главная</span>
-                    </a>
-                    <a href="glossary.html">
-                        <i class="fas fa-book-open"></i>
-                        <span>Словарь</span>
-                    </a>
-                    <a href="hardware.html">
-                        <i class="fas fa-chart-line"></i>
-                        <span>Аналитика</span>
-                    </a>
-                    <a href="anketa.html">
-                        <i class="fas fa-pen-to-square"></i>
-                        <span>Анкета</span>
-                    </a>
-                    <a href="software.html">
-                        <i class="fas fa-lightbulb"></i>
-                        <span>Стратегии</span>
-                    </a>
-                </div>
-            </div>
-            <div class="main-content">
-                <div class="gradient-card">
-                    <div class="inner-white">
-                        <h1>Аналитика: дивидендный календарь</h1>
-                        <hr>
-                        <h2>Дивидендный календарь на 2025 год</h2>
-                        <table>
-                            <tr>
-                                <th>Компания</th>
-                                <th>Тикер</th>
-                                <th>Дивиденд (руб.)</th>
-                                <th>Дата отсечки</th>
-                            </tr>
-                            <tr>
-                                <td>Газпром</td>
-                                <td>GAZP</td>
-                                <td>25</td>
-                                <td>15.07.2025</td>
-                            </tr>
-                            <tr>
-                                <td>Сбербанк</td>
-                                <td>SBER</td>
-                                <td>18</td>
-                                <td>10.05.2025</td>
-                            </tr>
-                            <tr>
-                                <td>Лукойл</td>
-                                <td>LKOH</td>
-                                <td>500</td>
-                                <td>20.12.2025</td>
-                            </tr>
-                            <tr>
-                                <td>Норильский никель</td>
-                                <td>GMKN</td>
-                                <td>900</td>
-                                <td>25.10.2025</td>
-                            </tr>
-                        </table>
-                        <h2>Доходность индекса МосБиржи</h2>
-                        <ol>
-                            <li>2022: -12%</li>
-                            <li>2023: +18%</li>
-                            <li>2024: +22%</li>
-                            <li>2025: +15%</li>
-                        </ol>
-                        <footer>
-                            © 2026 Инвестиции в акции Konstantin Sborschikov
-                        </footer>
-                    </div>
+        <div class="main-content">
+            <div class="gradient-card">
+                <div class="inner-white">
+                    <h1>Аналитика: дивидендный календарь</h1>
+                    <hr>
+                    <h2>Дивидендный календарь на 2025 год</h2>
+                    <table>
+                        <tr>
+                            <th>Компания</th>
+                            <th>Тикер</th>
+                            <th>Дивиденд (руб.)</th>
+                            <th>Дата отсечки</th>
+                        </tr>
+                        <tr>
+                            <td>Газпром</td>
+                            <td>GAZP</td>
+                            <td>25</td>
+                            <td>15.07.2025</td>
+                        </tr>
+                        <tr>
+                            <td>Сбербанк</td>
+                            <td>SBER</td>
+                            <td>18</td>
+                            <td>10.05.2025</td>
+                        </tr>
+                        <tr>
+                            <td>Лукойл</td>
+                            <td>LKOH</td>
+                            <td>500</td>
+                            <td>20.12.2025</td>
+                        </tr>
+                        <tr>
+                            <td>Норильский никель</td>
+                            <td>GMKN</td>
+                            <td>900</td>
+                            <td>25.10.2025</td>
+                        </tr>
+                    </table>
+                    <h2>Доходность индекса МосБиржи</h2>
+                    <ol>
+                        <li>2022: -12%</li>
+                        <li>2023: +18%</li>
+                        <li>2024: +22%</li>
+                        <li>2025: +15%</li>
+                    </ol>
+                    <footer>
+                         © 2026 Инвестиции в акции Konstantin Sborschikov
+                    </footer>
                 </div>
             </div>
-            <script>
-                const body = document.body;
-                menuToggle.addEventListener('click', () => {
-                    sidebar.classList.toggle('open');
-                    body.style.overflow = sidebar.classList.contains('open') ? 'hidden' : '';
-                });
-            </script>
+        </div>
     </body>
 </html>
