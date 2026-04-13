@@ -243,11 +243,10 @@
         </div>
     </div>
         <script>
-            const menuToggle = document.getElementById('menuToggle');
-            const sidebar = document.getElementById('sidebar');
-            if (menuToggle) menuToggle.addEventListener('click', () => sidebar.classList.toggle('open'));
-            document.querySelectorAll('.nav-drawer a').forEach(link => {
-                link.addEventListener('click', () => { if (window.innerWidth <= 900) sidebar.classList.remove('open'); });
+            const body = document.body;
+            menuToggle.addEventListener('click', () => {
+                sidebar.classList.toggle('open');
+                body.style.overflow = sidebar.classList.contains('open') ? 'hidden' : '';
             });
         </script>
     </body>
